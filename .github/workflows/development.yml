@@ -34,3 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # Setup python
+      - name: Setup python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+
+      - name: run pre-commit
+        uses: pre-commit/action@v3.0.0
